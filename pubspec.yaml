@@ -1,4 +1,4 @@
-name: worldtime
+name: world_time
 description: A Flutter application to show time from different parts of the World.
 
 # The following line prevents the package from being accidentally published to
