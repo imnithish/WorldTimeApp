@@ -6,30 +6,6 @@ class ChooseLocation extends StatefulWidget {
 }
 
 class _ChooseLocationState extends State<ChooseLocation> {
-  int counter = 0;
-
-  void getData(int a, int b) async {
-    //simulate network request for a username
-    String username = await Future.delayed(Duration(seconds: a), () {
-      return ('imnithish');
-    });
-
-    //simulate network request for username bio
-    String bio = await Future.delayed(Duration(seconds: b), () {
-      return ('professional procastinator!');
-    });
-
-    print('$username and $bio');
-  }
-
-  //stateful widget life cycles
-  @override
-  void initState() {
-    super.initState();
-    print('initState fn ran');
-    getData(3, 2);
-  }
-
   @override
   Widget build(BuildContext context) {
     print('build fn ran');
@@ -41,16 +17,12 @@ class _ChooseLocationState extends State<ChooseLocation> {
         centerTitle: true,
         elevation: 0,
       ),
-      body: Center(
-          child: RaisedButton(
+      body: Center(child: RaisedButton(
         onPressed: () {
           setState(() {
-            setState(() {
-              counter += 1;
-            });
+            setState(() {});
           });
         },
-        child: Text('$counter'),
       )),
     );
   }
